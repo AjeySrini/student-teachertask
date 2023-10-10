@@ -22,7 +22,9 @@ const Sidebar = ({ children }) => {
 
   const textStyle1 = {
     display : "block",
-    fontSize: '11px'
+    fontSize: '14px',
+    padding:"4px",
+    margin:"4px"
   };
   if(isOpen){
     textStyle.display="block";
@@ -30,7 +32,7 @@ const Sidebar = ({ children }) => {
   }
   return (
     <div className="container">
-      <div style={{ width: isOpen ? "160px" : "75px" }} className="sidebar">
+      <div style={{ width: isOpen ? "220px" : "100px" }} className="sidebar">
         <div className="top_section">
           <div className="sidebar-brand rotate-n-15" >
             <i className="fas fa-laugh-wink icon "></i>
