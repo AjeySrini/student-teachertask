@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+
+}
+.titlesection{
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  background-color: #e3e3e3;
+}
+.header {
+ display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin: 4px;;
+  border: 2px solid #000;
+  padding: 8px;
+}
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+.container{
+  display:flex;
+}
+main{
+  width: 100%;
+  padding: 2px;
+}
+.sidebar{
+  background: #53a6ee;
+  color: #eceaea;
+  transition: all 0.5s;
+}
+
+.top_section{
+  display: flex;
+  align-items:center;
+  padding:10px 10px;
+}
+.logo{
+  font-size: 30px;
+}
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover{
+  background:lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active{
+  background: lightskyblue;
+  color: #000;
+}
+.icon, .link_text{
+  font-size: 20px;
+}
+.collapse-item, .collapse-header{
+  position:relative;
+  color: #000;
+  background-color:#53a6ee;
+  border: 1px solid #ccc;
+  box-shadow: 1 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #d6d4d4;
+  color: #0a0a0a;
+  font-size: calc(2px + 2vmin);
+  margin: 2px;
+  padding: 3px;
+  position: sticky;
+  bottom: 0%;display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;   
+  width: -webkit-fill-available;
+
+ 
+}
+.tableheader,.tablecont{
+  text-align: center;
+  border: 1px solid #2f2e2e;
+  padding: 2px;
+  
+}
+.tablecont:hover{
+  background: #53a6ee ;text-decoration:white;
+
+}
+.viewstudent{    
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-self: center;
+  content: normal;
+}
+.singledata{
+  text-align: left;
+  padding: 2px;
+}
+
+.singledatavalue{
+  text-align: left;
+  border: 1px solid #828282;
+  padding: 2px;
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.singledatavalue:hover{
+  background: #53a6ee ;color: white;
+
+}
