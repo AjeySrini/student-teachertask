@@ -15,7 +15,19 @@ const Sidebar = ({ children }) => {
   };
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  
+
+  const textStyle = {
+    display: "none"
+  };
+
+  const textStyle1 = {
+    display : "block",
+    fontSize: '11px'
+  };
+  if(isOpen){
+    textStyle.display="block";
+    textStyle1.display="none";
+  }
   return (
     <div className="container">
       <div style={{ width: isOpen ? "160px" : "75px" }} className="sidebar">
@@ -24,7 +36,7 @@ const Sidebar = ({ children }) => {
             <i className="fas fa-laugh-wink icon "></i>
           </div>
           <div
-            style={{ display: isOpen ? "block" : "none" ,padding:"6px",font:"18px"}}
+            style={textStyle }
           >
             SB ADMIN<sup className="font-extrabold">2</sup>
           </div>
@@ -33,12 +45,12 @@ const Sidebar = ({ children }) => {
         <div className="sidebar-brand flex flex-col md:flex-row justify-evenly items-center mt-0 md:mt-2 w-full">
         <Link to="/User">
           <i className="fas fa-fw fa-tachometer-alt text-sm w-1/10 text-center"></i>
-          <span className="text-xs md:text-base font-bold mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={{ display: isOpen ? "block" : "none" }} >
+          <span className="text-xs md:text-base font-bold mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={textStyle } >
             Dashboard
           </span>
           </Link>
         </div>
-        <p style={{display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"white" ,display: isOpen ? "none" : "block",paddingLeft:"8px"}}><Link to="/User">Dashboard</Link></p><br></br>
+        <p style={textStyle1}><Link to="/User">Dashboard</Link></p><br></br>
         <hr className="border-t-1 border-solid border-white ml-2 mr-2 box-content h-0 mt-2 md:mt-0" /><br></br>
          <div
           className="flex flex-col items-start justify-start text-base  text-white md:px-4 md:py-2 mt-2 pointer"
@@ -46,12 +58,12 @@ const Sidebar = ({ children }) => {
         >
           <div className="sidebar-brand flex flex-col md:flex-row justify-evenly items-center mt-0 md:mt-2 w-full">
            
-            <span className="text-xs md:text-sm font-light mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={{ display: isOpen ? "block" : "none" }}>
+            <span className="text-xs md:text-sm font-light mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={ textStyle }>
               Teacher : <i className="fa-solid fa-chevron-right hidden md:inline w-1/10 text-end"></i>
             </span>
             
           </div>
-          <p style={{display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"white" ,display: isOpen ? "none" : "block",paddingRight:"4px"}}>Teacher</p>
+          <p style={textStyle1}>Teacher</p>
        
           {isActive === "div1" && (
            
@@ -70,12 +82,12 @@ const Sidebar = ({ children }) => {
         >
           <div className="sidebar-brand flex flex-col md:flex-row justify-start text-start items-center mt-4 md:mt-0 w-full">
            
-            <span className="text-xs md:text-sm font-light mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={{ display: isOpen ? "block" : "none" }}>
+            <span className="text-xs md:text-sm font-light mt-2 md:mt-0 w-4/5 text-center md:text-left md:px-4" style={ textStyle }>
               Students : <i className="fa-solid fa-chevron-right hidden md:inline w-1/10 text-end"></i>
             </span>
            
           </div>
-          <p style={{display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"white" ,display: isOpen ? "none" : "block",paddingLeft:"5px"}}>Students</p>
+          <p style={textStyle1}>Students</p>
        
           {isActive === "div2" && (
             <div className="flex-col bg-white mt-2 rounded-md  w-full">
@@ -106,21 +118,21 @@ const Sidebar = ({ children }) => {
             style={{width:"50%", height:"50%"}}
           />
           <div>
-          <p class="text-center mb-2 text-xs color"  style={{ display: isOpen ? "block" : "none" }}>
+          <p class="text-center mb-2 text-xs color"  style={ textStyle }>
             <strong>SB Admin Pro</strong> is packed with premium features,
             components, and more!
           </p>
-          <p style={{display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"white" ,display: isOpen ? "none" : "block",paddingLeft:"8px"}}> <strong>SB Admin Pro</strong> is packed with premium features,
+          <p style={textStyle1}> <strong>SB Admin Pro</strong> is packed with premium features,
             components, and more!</p>
        
           <a
             class="btn btn-success btn-sm"
             href="https://startbootstrap.com/theme/sb-admin-pro"
-            style={{ display: isOpen ? "block" : "none" }}
+            style={ textStyle }
           >
             Upgrade to Pro!
           </a>
-          <p style={{display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",color:"white" ,display: isOpen ? "none" : "block",paddingLeft:"8px"}}> Upgrade to Pro!</p>
+          <p style={textStyle1}> Upgrade to Pro!</p>
        
           </div>
         </div>
